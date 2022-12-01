@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Elsa Gashis' Portfolio</title>
+        <link href="style.css" rel="stylesheet">
+    </head>
+<body>
+
+<div id="header">
+
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" alt="logo" class="logo">
+
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Project</a></li>
+                <li><a href="#contact">Contact</a></li>
+
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Sophomore Student at RITK CIT</p>
+            <h1>Hi, I'm <span>Elsa Gashi</span></h1>
+
+        </div>
+    </div>
+</div>
+<!----------------about----------->
+
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/aboutme.png">
+            </div>
+            <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>Elsa Gashi is 19 years and is both a CIT student at RIT Kosovo and a front-end developer, 
+                 with a diverse range of skills including HTML, CSS, Java and Python.
+                 The website is personal, leaning heavily into the programmer aesthetic. 
+                 Subtle animations encourage visitors to scroll down the page through a gallery of skills.
+                 These previous years Elsa engaged in other diverse activities other than those in technology.
+                 She savors doing volunteering work and  likes drawing but in particular, cooking and creating
+                 because she likes trying and experimenting with modern various things.</p>
+            
+                 <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                 </div>
+                 <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Programing Languages</span><br>Java, HTML, CSS, Python</li>
+                        <li><span>Object Oriented Programming</span><br>Based with Java</li>
+                        <li><span>Problem Solving</span></li>
+                        <li><span>Leadership</span></li>
+                        <li><span>Teamwork</span></li>
+                    </ul>
+                 </div>
+
+                 <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>09/2021-05/2025 Pristina, Kosovo </span><br> Bachelor of Science, Rochester Institute of Technology</li>
+                        <li><span>09/2022-11/2022 Pristina, Kosovo</span><br>  Techstitutions, PEN Education</li>
+                        <li><span>05/2022-09/2022 Pristina, Kosovo </span><br> LIFE from Gjirafa</li>
+                        <li><span>01/2022-04/2022 Pristina, Kosovo </span><br>  Python, ROI Academy</li>
+                        <li><span>09/2020-06/2021 Pristina, Kosovo </span><br>SAT & Toefl, American Advising Center</li>
+                        <li><span>10/2020-04/2021 Pristina, Kosovo </span><br> Junior Geeks, ICK</li>
+                        <li><span>009/2020-10/2020 Pristina, Kosovo </span><br> Life Skills, Institute for Management and Development</li>
+                        <li><span>09/2017-05/2021 Pristina, Kosovo </span><br>  High School, Sami Frasheri</li>
+                    </ul>
+                 </div>
+            </div>
+         </div>
+    </div>
+</div>
+
+<!----------------Projects    ---------------------------->>
+<div id="projects">
+    <div class="container">
+        <h1 class="sub-title"> My Project</h1>
+        <div class="projects-list">
+            <div class="project">
+                <img src="images/projectphone.png">
+                <div class="layer">
+                    <h3>Telecomunication Service</h3>
+                    <p>Back-End group project with Java in Object Oriented Programming</p>
+                    <a href="#"><ion-icon name="code-download-outline"></ion-icon></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">View More</a>
+</div>
+
+<!---------------contact------------------------->
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><ion-icon name="mail-outline"></ion-icon>elsag1@auk.org</p>
+                <p><ion-icon name="call-outline"></ion-icon>+38340120071</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/elsa.gashi.106/"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="https://www.instagram.com/elssagaashi/"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href="https://www.linkedin.com/in/elsa-gashi-75189620a/"><ion-icon name="logo-linkedin"></ion-icon></a>
+                </div>
+                <a href="#"class="btn btn2">Download Projects</a>
+            </div>
+            <div class="contact-right">
+                <form>
+
+                <input type="text" name="Name" placeholder="Your Name" required>
+                <input type="email" name="Email" placeholder="Your Email" required>
+                <textarea name="Message" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn btn2">Submit</button>
+
+                </form>
+
+             </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright @ Elsa Gashi</p>
+    </div>
+</div>
+<script>
+
+    var tabelinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    //this is so that the skills or education bullet points will be remove when the other link is clicked>>>
+    function opentab(tabname){
+        for(tablink of tabelinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
